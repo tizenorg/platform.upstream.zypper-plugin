@@ -1,0 +1,18 @@
+-------------------------------------------------------------------
+Wed May  9 10:01:48 UTC 2012 - coolo@suse.com
+
+- patch license to be in spdx.org format
+
+-------------------------------------------------------------------
+Tue Jul  5 12:19:37 CEST 2011 - ma@suse.de
+
+- Fix specfile for factory
+
+-------------------------------------------------------------------
+Mon Jul  4 15:16:39 CEST 2011 - ma@suse.de
+
+- Provide zypp-plugin-python as stand alone package so
+  that it can be used in other zypp plugins like snapper.
+  (formerly a subpackage of zypp-plugin-spacewalk)
+- version 0.3
+
