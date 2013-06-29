@@ -20,6 +20,7 @@ License:	GPL-2.0
 Url:		https://gitorious.org/opensuse/zypp-plugin
 Summary:	Helper that makes writing ZYpp plugins easier
 Source0:	%{name}-%{version}.tar.bz2
+Source1001: 	zypp-plugin.manifest
 
 # Actually libzypp(plugin) should be required. Unfortunately the corresponing
 # provides was introduced to late for SUSE Manager/SLE-11-SP1. We do not want to
@@ -43,6 +44,7 @@ and implementing the commands you want to respond to as python methods.
 
 %prep
 %setup -q -n zypp-plugin
+cp %{SOURCE1001} .
 
 %build
 
@@ -51,5 +53,6 @@ and implementing the commands you want to respond to as python methods.
 %{__install} python/zypp_plugin.py %{buildroot}%{py_sitedir}/zypp_plugin.py
 
 %files python
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{py_sitedir}/zypp_plugin.py
